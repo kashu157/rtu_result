@@ -1,0 +1,86 @@
+body{
+  font-family: Arial;
+  background: #eef2f7;
+}
+
+.main{
+  max-width: 950px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h2, h3{
+  text-align: center;
+}
+
+.form{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+input{
+  width: 260px;
+  padding: 8px;
+  margin: 5px;
+}
+
+button{
+  padding: 10px 15px;
+  background: #004e92;
+  color: white;
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td{
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+th{
+  background: #004e92;
+  color: white;
+}
+
+/* PRINT ONLY MARKSHEET */
+ @media print {
+
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  #printSection,
+  #printSection * {
+    visibility: visible;
+  }
+
+  #printSection {
+    position: relative;
+    width: 100%;
+  }
+
+  h1, h3, p {
+    text-align: center;
+    margin: 5px 0;
+  }
+
+  table {
+    margin-top: 10px;
+  }
+}

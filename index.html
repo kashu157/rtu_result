@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RTU Result System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main">
+
+  
+
+  <!-- INPUT FORM -->
+  <div class="form">
+    <input id="roll" placeholder="Roll Number">
+    <input id="name" placeholder="Student Name">
+
+    <input id="cg_m" type="number" placeholder="Computer Graphics Marks">
+    <input id="cd_m" type="number" placeholder="Compiler Designing Marks">
+    <input id="wc_m" type="number" placeholder="Wireless Communication Marks">
+    <input id="it_m" type="number" placeholder="Information Theory Marks">
+    <input id="os_m" type="number" placeholder="Operating System Marks">
+
+    <button onclick="calculate()">Calculate & Save</button>
+    <button onclick="window.print()">Print / Download PDF</button>
+  </div>
+
+  <!-- PRINT + RESULT SECTION -->
+  <div id="printSection">
+
+
+    <h2>Rajasthan Technical University</h2>
+  <h3>College Name: Arya College of Engineering</h3>
+  
+    <p><strong>Roll No:</strong> <span id="pRoll"></span></p>
+    <p><strong>Student Name:</strong> <span id="pName"></span></p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Sr.</th>
+          <th>Subject Code</th>
+          <th>Subject Name</th>
+          <th>Marks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>CS601</td><td>Computer Graphics</td><td id="mCG"></td></tr>
+        <tr><td>2</td><td>CS602</td><td>Compiler Designing</td><td id="mCD"></td></tr>
+        <tr><td>3</td><td>CS603</td><td>Wireless Communication</td><td id="mWC"></td></tr>
+        <tr><td>4</td><td>CS604</td><td>Information Theory</td><td id="mIT"></td></tr>
+        <tr><td>5</td><td>CS605</td><td>Operating System</td><td id="mOS"></td></tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="3">TOTAL MARKS</th>
+          <th id="totalMarks"></th>
+        </tr>
+      </tfoot>
+    </table>
+
+    <br>
+
+    <table>
+      <tr>
+        <th>SGPA</th>
+        <th>CGPA</th>
+        <th>Result</th>
+      </tr>
+      <tr>
+        <td id="pSGPA"></td>
+        <td id="pCGPA"></td>
+        <td id="pResult"></td>
+      </tr>
+    </table>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
